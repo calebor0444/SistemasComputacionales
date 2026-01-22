@@ -1,5 +1,3 @@
-
-
 \## Objetivo de la clase 1
 
 

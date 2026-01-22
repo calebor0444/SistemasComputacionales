@@ -1,6 +1,6 @@
-\# Resumen 
+# Resumen 
 
-\## Objetivo de la clase 1
+## Objetivo de la clase 1
 
 
 
@@ -10,13 +10,13 @@ El objetivo de esta clase es \*\*comprender y aplicar el uso de las principales 
 
 A través de estos ejercicios, el estudiante aprenderá a:
 
-\- Declarar y manipular colecciones genéricas
+- Declarar y manipular colecciones genéricas
 
-\- Insertar, eliminar y ordenar elementos
+- Insertar, eliminar y ordenar elementos
 
-\- Recorrer colecciones y mostrar información en consola
+- Recorrer colecciones y mostrar información en consola
 
-\- Comprender las diferencias entre las colecciones mas utilizadas
+- Comprender las diferencias entre las colecciones mas utilizadas
 
 
 
@@ -26,7 +26,7 @@ A través de estos ejercicios, el estudiante aprenderá a:
 
 
 
-\## ¿Qué son las colecciones en .NET? (Resumen)
+## ¿Qué son las colecciones en .NET? (Resumen)
 
 
 
@@ -34,7 +34,7 @@ Las \*\*colecciones\*\* en .NET son estructuras de datos que permiten almacenar 
 
 
 
-\### 🔹 Colecciones genéricas (`System.Collections.Generic`)
+### 🔹 Colecciones genéricas (`System.Collections.Generic`)
 
 Son las más utilizadas en aplicaciones modernas. Ofrecen \*\*seguridad de tipos\*\*, mejor rendimiento y evitan errores en tiempo de ejecución.
 
@@ -42,17 +42,17 @@ Son las más utilizadas en aplicaciones modernas. Ofrecen \*\*seguridad de tipos
 
 Ejemplos comunes:
 
-\- `List<T>` → Listas dinámicas
+- `List<T>` → Listas dinámicas
 
-\- `Stack<T>` → Pilas (LIFO)
+- `Stack<T>` → Pilas (LIFO)
 
-\- `Queue<T>` → Colas (FIFO)
+- `Queue<T>` → Colas (FIFO)
 
-\- `Dictionary<TKey, TValue>` → Pares clave-valor
+- `Dictionary<TKey, TValue>` → Pares clave-valor
 
 
 
-\### 🔹 Colecciones no genéricas (`System.Collections`)
+### 🔹 Colecciones no genéricas (`System.Collections`)
 
 Son más antiguas y almacenan datos como `object`. Su uso no es recomendado en código nuevo.
 
@@ -60,9 +60,9 @@ Son más antiguas y almacenan datos como `object`. Su uso no es recomendado en c
 
 Ejemplos:
 
-\- `ArrayList`
+- `ArrayList`
 
-\- `Hashtable`
+- `Hashtable`
 
 
 

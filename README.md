@@ -10,7 +10,7 @@ Contiene los distintos ejemplos vistos en clase, así como la resolución de los
 
 ### Opción 2: Clonar con Git (recomendado)
 ```bash
-git clone https://github.com/tu-usuario/nombre-repo.git
+git clone https://github.com/calebor0444/SistemasComputacionales.git
 ```
 
 ### Opción 3: Descargar ejercicios individuales

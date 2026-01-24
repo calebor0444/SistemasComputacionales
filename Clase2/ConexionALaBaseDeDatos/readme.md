@@ -1,7 +1,7 @@
-# Generación automática de DbContext en .NET 8 (Entity Framework Core)
+# GeneraciÃ³n automÃ¡tica de DbContext en .NET 8 (Entity Framework Core)
 
 ## Objetivo
-Generar automáticamente el `DbContext` y las entidades de una aplicación C# a partir de una base de datos existente utilizando Entity Framework Core en .NET
+Generar automÃ¡ticamente el `DbContext` y las entidades de una aplicaciÃ³n C# a partir de una base de datos existente utilizando Entity Framework Core en .NET
 
 ---
 
@@ -38,7 +38,7 @@ dotnet ef dbcontext scaffold "Server=NombreDeTuServidorDeSQLServer;Database=Chin
 
 ## Paso 4: Generar el DbContext y las entidades (Scaffold)
 
-Crear o editar el archivo appsettings.json en la raíz del proyecto:
+Crear o editar el archivo appsettings.json en la raÃ­z del proyecto:
 
 ```json
 {
@@ -50,12 +50,12 @@ Crear o editar el archivo appsettings.json en la raíz del proyecto:
 
 #Importante:
 
-En caso de que se desee volver a generar, debido a alguna modificación en la base de datos se puede
-utilizar el siguiente comando con la salvedad de que todo las entidades serán reemplazadas:
+En caso de que se desee volver a generar, debido a alguna modificaciÃ³n en la base de datos se puede
+utilizar el siguiente comando con la salvedad de que todo las entidades serÃ¡n reemplazadas:
 
 ```bash
 dotnet ef dbcontext scaffold \
-"Server=CALEBPC\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;TrustServerCertificate=True;" \
+"Server=NombreServidor;Database=Chinook;Trusted_Connection=True;TrustServerCertificate=True;" \
 Microsoft.EntityFrameworkCore.SqlServer \
 -o Entidades \
 -c ChinookContext \
@@ -63,17 +63,17 @@ Microsoft.EntityFrameworkCore.SqlServer \
 --no-onconfiguring \
 --force
 ```
-¿Qué hace --force?
+Â¿QuÃ© hace --force?
 
 - Sobrescribe las clases existentes
 - Incluye tablas nuevas
 - Actualiza columnas y relaciones
 
-Si se qusiera solo actualizar, por ejemplo agregando una tabla nueva podemos ejecutar el siguiente comando(prestar atención en -t (Nombre de la tabla):
+Si se qusiera solo actualizar, por ejemplo agregando una tabla nueva podemos ejecutar el siguiente comando(prestar atenciÃ³n en -t (Nombre de la tabla):
 
 ```bash
 dotnet ef dbcontext scaffold \
-"Server=CALEBPC\SQLEXPRESS;Database=Chinook;Trusted_Connection=True;TrustServerCertificate=True;" \
+"Server=NombreServidor;Database=Chinook;Trusted_Connection=True;TrustServerCertificate=True;" \
 Microsoft.EntityFrameworkCore.SqlServer \
 -o Entidades \
 -c ChinookContext \

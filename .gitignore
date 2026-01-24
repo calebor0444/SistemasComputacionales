@@ -38,3 +38,8 @@ packages/
 # Others
 *.cache
 *.log
+
+# Archivos de configuración local
+appsettings.Development.json
+appsettings.*.json
+!appsettings.json

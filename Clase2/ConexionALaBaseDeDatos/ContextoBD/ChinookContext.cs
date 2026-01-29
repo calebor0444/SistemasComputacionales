@@ -11,7 +11,6 @@ public partial class ChinookContext : DbContext
         : base(options)
     {
     }
-
     public virtual DbSet<Album> Albums { get; set; }
 
     public virtual DbSet<Artist> Artists { get; set; }

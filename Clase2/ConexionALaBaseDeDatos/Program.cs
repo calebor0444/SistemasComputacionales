@@ -1,4 +1,5 @@
 ﻿using ConexionALaBaseDeDatos.Ejemplos;
+using ConexionALaBaseDeDatos.EjerciciosResueltos;
 using System;
 using System.Linq;
 
@@ -8,7 +9,7 @@ namespace ConexionALaBaseDeDatos
     {
         static void Main(string[] args)
         {
-            PrimeraConexion.Ejecutar();
+            //PrimeraConexion.Ejecutar();
             //SelectSimple.Ejecutar();
             //FiltroConWhere.Ejecutar();
             //OrdenamientoYParticion.Ejecutar();
@@ -16,7 +17,7 @@ namespace ConexionALaBaseDeDatos
             //JoinSimple.Ejecutar();
             //NavegacionEntreEntidades.Ejecutar();
 
-            //Ejercicio4.Ejecutar();
+            Ejercicio1.Ejecutar();
             //Ejercicio5.Ejecutar();
         }
 

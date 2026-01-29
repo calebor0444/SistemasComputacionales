@@ -4,39 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConexionALaBaseDeDatos.Ejemplos
+namespace ConexionALaBaseDeDatos.EjerciciosResueltos
 {
-    internal class SelectSimple
+    internal class Ejercicio1
     {
+        /// <summary>
+        /// Obtiene los artistas en la base de datos
+        /// </summary>
         public static void Ejecutar()
         {
             try
             {
                 using (var elContextoBd = ConexionABD.ConfigurarLaConexion())
                 {
+
                     //Sintaxis de consulta
-                    var clientes = (from cliente in elContextoBd.Customers
+                    var artistas = (from cliente in elContextoBd.Artists
                                     select new
                                     {
-                                        cliente.FirstName,
-                                        cliente.LastName
+                                        cliente.Name,
                                     }).ToList();
 
-                   
-
                     //Sintaxis de metodo
-                    var losClientes = elContextoBd.Customers
+                    var artistas2 = elContextoBd.Artists.OrderBy(artistas=> artistas.Name)
                         .Select(c => new
                         {
-                            c.FirstName,
-                            c.LastName
-                        })
-                        .ToList();
+                            c.Name
+                        }).ToList();
 
-                    Console.WriteLine("Clientes actuales:");
-                    foreach (var cliente in losClientes)
+                    //artistas2.Order();
+
+                    Console.WriteLine("Artistas actuales:");
+                    foreach (var artista in artistas2)
                     {
-                        Console.WriteLine($"{cliente.FirstName} {cliente.LastName}");
+                        Console.WriteLine($"{artista.Name}");
                     }
                 }
             }

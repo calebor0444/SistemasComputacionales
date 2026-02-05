@@ -35,16 +35,18 @@ namespace ConexionALaBaseDeDatos.Ejemplos
 
 
                     //Consulta de expresion
-                    var facturas2 = (from i in elContextoBd.Invoices
-                                    join c in elContextoBd.Customers on i.CustomerId equals c.CustomerId
+                    var facturas2 = (from invoices in elContextoBd.Invoices
+                                    join customers in elContextoBd.Customers on invoices.CustomerId equals customers.CustomerId
                                     select new
                                     {
-                                        i.InvoiceId,
-                                        Cliente = c.FirstName + " " + c.LastName,
-                                        i.Total
+                                        invoices.InvoiceId,
+                                        Cliente = customers.FirstName + " " + customers.LastName,
+                                        invoices.Total
                                     })
                                     .Take(10)
                                     .ToList();
+
+                    
                 }
 
                 

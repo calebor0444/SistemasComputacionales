@@ -4,29 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConexionALaBaseDeDatos.Ejemplos
+namespace ConexionALaBaseDeDatos.EjerciciosResueltos
 {
-    internal class OrdenamientoYParticion
+    internal class Ejercicio2
     {
+        /// <summary>
+        /// Canciones que contienen la palabra "feel"
+        /// </summary>
         public static void Ejecutar()
         {
             try
             {
                 using (var elContextoBd = ConexionABD.ConfigurarLaConexion())
                 {
-                    //Obtención de las primeras 10 canciones ordenadas alfabeticamente
-
                     //Expresión de metodo
-                    var lasCanciones = elContextoBd.Tracks
-                        .OrderBy(c => c.Name)
-                        .Select(c => c.Name)
-                        .Take(100)
+                    var canciones = elContextoBd.Tracks
+                        .Where(c => c.Name.Contains("feel"))
                         .ToList();
 
-                    Console.WriteLine("Primeras 10 canciones en orden alfabetico:");
-                    foreach (var cancion in lasCanciones)
+                    Console.WriteLine("Canciones con la palabra feel:");
+                    foreach (var cancion in canciones)
                     {
-                        Console.WriteLine($"{cancion}");
+                        Console.WriteLine($"{cancion.Name}");
                     }
                 }
             }

@@ -16,13 +16,13 @@ namespace ConexionALaBaseDeDatos.Ejemplos
                 using (var elContextoBd = ConexionABD.ConfigurarLaConexion())
                 {
                     var facturas = elContextoBd.Invoices
-                           .Select(factura => new
+                           .Select(Invoices => new
                            {
-                               factura.InvoiceId,
-                               Cliente = factura.Customer.FirstName + " " + factura.Customer.LastName,
-                               factura.Total
+                               Invoices.InvoiceId,
+                               Cliente = Invoices.Customer.FirstName + " " + Invoices.Customer.LastName,
+                               Invoices.Total
                            })
-                           .ToList();
+                           .Take(10);
 
                     foreach (var factura in facturas)
                     {

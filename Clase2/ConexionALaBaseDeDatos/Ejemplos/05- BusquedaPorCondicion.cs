@@ -21,10 +21,7 @@ namespace ConexionALaBaseDeDatos.Ejemplos
 
                     if (cliente != null)
                         Console.WriteLine(cliente.FirstName);
-
-                    //Da error debido a que no existe y se utilizó First
-                     cliente = elContextoBd.Customers
-                        .First(c => c.Email == "eduardo3@woodstock.com.br");
+                
                 }
             }
             catch (Exception ex)

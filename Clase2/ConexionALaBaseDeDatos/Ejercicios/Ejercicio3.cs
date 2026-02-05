@@ -4,29 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConexionALaBaseDeDatos.Ejemplos
+namespace ConexionALaBaseDeDatos.EjerciciosResueltos
 {
-    internal class OrdenamientoYParticion
+    internal class Ejercicio3
     {
+        /// <summary>
+        /// Obtiene todas las canciones(Nombre y tamaño en bytes) que posean un tamaño mayor a 9 Megabytes
+        /// </summary>
         public static void Ejecutar()
         {
             try
             {
                 using (var elContextoBd = ConexionABD.ConfigurarLaConexion())
                 {
-                    //Obtención de las primeras 10 canciones ordenadas alfabeticamente
-
+                    var tamañoenBytesRequerido = 9 * 1024 * 1024;
                     //Expresión de metodo
                     var lasCanciones = elContextoBd.Tracks
-                        .OrderBy(c => c.Name)
-                        .Select(c => c.Name)
-                        .Take(100)
+                        .Select(c => new { c.Name, c.Bytes})
+                        .Where(c=> c.Bytes > tamañoenBytesRequerido)
                         .ToList();
 
-                    Console.WriteLine("Primeras 10 canciones en orden alfabetico:");
+                    Console.WriteLine("Canciones que pesan mas de 9 Megabytes:");
                     foreach (var cancion in lasCanciones)
                     {
-                        Console.WriteLine($"{cancion}");
+                        Console.WriteLine($"Nombre: {cancion.Name} Tamaño:{cancion.Bytes}");
                     }
                 }
             }

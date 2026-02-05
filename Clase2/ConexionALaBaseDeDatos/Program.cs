@@ -9,18 +9,7 @@ namespace ConexionALaBaseDeDatos
     {
         static void Main(string[] args)
         {
-            //PrimeraConexion.Ejecutar();
-            //SelectSimple.Ejecutar();
-            //FiltroConWhere.Ejecutar();
-            //OrdenamientoYParticion.Ejecutar();
-            //BusquedaPorCondicion.Ejecutar();
-            //JoinSimple.Ejecutar();
-            //NavegacionEntreEntidades.Ejecutar();
-
-            Ejercicio1.Ejecutar();
-            //Ejercicio5.Ejecutar();
+            Ejercicio3.Ejecutar();
         }
-
-
     }
 }
